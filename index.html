@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#171b2b" />
+  <meta name="description" content="A local-first 3D scene prototype for Luna and Biscuit." />
+  <title>Luna & Biscuit · Pocket Studio</title>
+  <script type="module" crossorigin src="./assets/index-DxQYoW2m.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DEvj7vKv.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar"><a class="brand" href="./"><span class="brand-icon">✦</span><span>Luna & Biscuit<small>POCKET STUDIO</small></span></a><span class="badge">EARLY PROTOTYPE</span></header>
+    <main>
+      <section class="intro"><div><p class="eyebrow">LITTLE THINGS. BIG LOVE.</p><h1>Your next little story.</h1><p>A cosy world, two best friends, and a biscuit worth sharing.</p></div><button class="quiet" id="save">Save project</button></section>
+      <div class="workspace">
+        <section class="stage-panel" aria-label="3D scene preview">
+          <div class="panel-head"><span><span class="live-dot"></span> Scene preview</span><span id="scene-label">The last biscuit</span></div>
+          <div id="stage"><div class="scene-caption"><span>EPISODE 001</span><strong id="episode-title">The last biscuit</strong></div><div id="loading">Preparing your little world…</div><div class="stage-tag">3D BLOCKOUT · ORIGINAL PROTOTYPE MODELS</div></div>
+          <div class="playback"><button id="play" class="play" aria-label="Pause scene">Ⅱ</button><span id="time">0:00 / 0:12</span><input id="scrub" type="range" min="0" max="12" value="0" step="0.01" aria-label="Scene playhead" /><button id="restart" class="quiet" aria-label="Restart scene">↺</button></div>
+          <p class="stage-hint">Drag to orbit · Pinch to zoom · Export uses the Story camera</p>
+        </section>
+        <aside class="director">
+          <section class="card"><p class="eyebrow">01 / THE IDEA</p><h2>What happens next?</h2><label for="prompt">Describe a little moment</label><textarea id="prompt" rows="4" maxlength="600">Luna and Biscuit share the last biscuit in their cosy bedroom.</textarea><button id="arrange" class="primary">✦ Arrange my scene</button><p class="note">Preset scene arranger, not AI yet. Recognises sharing, cuddling and waving; other ideas use the selected action.</p></section>
+          <section class="card"><p class="eyebrow">02 / MAKE IT YOURS</p><h2>Set the mood</h2><label for="action">Character action</label><select id="action"><option value="share">Share a biscuit</option><option value="cuddle">A little cuddle</option><option value="wave">Hello, best friend</option></select><label for="mood">Lighting</label><div id="moods" class="choices" role="group" aria-label="Lighting mood"><button data-mood="warm" class="selected" aria-pressed="true">☀ Cosy glow</button><button data-mood="night" aria-pressed="false">☾ Moonlight</button></div><label for="camera">Camera</label><select id="camera"><option value="story">Story · both friends</option><option value="close">Close-up · little moments</option><option value="wide">Wide · the whole room</option></select></section>
+          <section class="card export-card"><div><p class="eyebrow">03 / YOUR MINI EPISODE</p><h2>Take your story with you.</h2></div><p>12 seconds · vertical 3D video · silent</p><button class="primary export" id="export">↓ Export video</button><a id="download" hidden>Download your video</a><p class="note" id="export-note">Rendered on this device. Keep the app open while exporting. No uploads or paid services.</p></section>
+        </aside>
+      </div>
+      <section class="storyboard"><div class="section-title"><h2>Your scene, in three little beats.</h2><span>12 SECOND STORY</span></div><ol id="beats"></ol></section>
+      <footer>Made for small screens and big imaginations.<span>Local prototype · no AI model connected · no audio yet</span></footer>
+    </main><div id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
